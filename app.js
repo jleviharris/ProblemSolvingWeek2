@@ -38,18 +38,14 @@ Capitalize(string2);
 // For this problem Im thinking that Ill be able to use problem one and rework it so that 
 // once it runs the function from the first problem ill check to see if it equalls the original string.
 let string3 = "madam"
-let returnString3 = [];
+let returnString3 = "";
 function ReverseString3 (string){
     for (let i=string.length - 1; i>= 0; i--){
-        returnString3.push(string[i]);
+        returnString3 = returnString3 + string[i];
     };
-    console.log(returnString3);
+   if (returnString3 === string){
+    console.log('Palindrome')
+   }else console.log('Failed Test')
 };
 
-
-function Palindrome (string){
-    if (ReverseString3(string) === string){
-        console.log('Palindrome')
-    }else console.log('Failed Test')
-};
-Palindrome(string3);
+ReverseString3(string3);
