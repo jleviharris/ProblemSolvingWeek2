@@ -30,14 +30,27 @@ function Capitalize (string){
     console.log(returnString2);
 };
 Capitalize(string2);
-
-
 // 3. Compress a string of characters
 //First I need to create a function that takes in a string
-//Next 
-
-
-
+//Next ill need to figure out how to track if a letter is repeated and also how many times its repeated
+//then ill need to add in the number of times its repeated while also taking out the extra letters.
+let stringToCompress = prompt("Type a string to compress")
+let returnString4 = "";
+let counter = 1;
+function Compress(string){
+    for (let i=0; i<string.length; i++){
+        let cur = string[i];
+        let next = string[i+1];
+        if (cur === next){
+            counter ++;  
+        }else {
+        returnString4 = returnString4 + counter + string[i];
+        counter = 1;
+    };  
+};
+console.log(returnString4);
+};
+Compress(stringToCompress);
 // Bonus challenge: Palindrome 
 // For this problem Im thinking that Ill be able to use problem one and rework it so that 
 // once it runs the function from the first problem ill check to see if it equalls the original string.
@@ -51,5 +64,4 @@ function ReverseString3 (string){
     console.log('Palindrome')
    }else console.log('Failed Test')
 };
-
 ReverseString3(string3);
