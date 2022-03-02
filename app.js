@@ -4,12 +4,13 @@
 // Second I need to figure out how to reverse the string.
 // Third I need to return the reversed string.
 let string1 = "abcdefghijklmnopqrstuvwxyz";
-let returnString;
+let returnString = [];
 function ReverseString (string){
     for (let i=string.length - 1; i>= 0; i--){
-        console.log(string[i]);
+        returnString.push(string[i]);
 
-    }
+    };
+    console.log(returnString);
 };
 ReverseString(string1);
 
